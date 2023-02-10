@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+  app: 
+    container_name: python
+    image: python
+    ports:
+      - "80:80"
+  db:
+    container_name: postgres
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: qwerty
+      POSTGRES_DB: postgres
+    
