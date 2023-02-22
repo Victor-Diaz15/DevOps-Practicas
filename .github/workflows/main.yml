@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: 18.12.1
       - run: npm install -g surge
-      - run: surge . ${{ secrets.SURGE_LOGIN }} --token ${{ secrets.SURGE_TOKEN }}
+      - run: surge . ${{ secrets.SURGE_LOGIN }} ${{ secrets.SURGE_TOKEN }}
